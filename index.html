@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/responsive.css" />
+    <link rel="stylesheet" href="styles/shipping-calculator.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -38,6 +39,9 @@
           <a href="index.html" data-i18n="home">Home</a>
           <a href="about.html" data-i18n="about">About Us</a>
           <a href="#categories" data-i18n="products">Products</a>
+          <a href="#shipping-calculator" data-i18n="shipping_calculator"
+            >Shipping Calculator</a
+          >
           <a href="blog.html" data-i18n="blog">Blog</a>
           <a href="contact.html" data-i18n="contact">Contact Us</a>
         </div>
@@ -59,13 +63,13 @@
         </p>
 
         <div class="contact-icons">
-          <a href="https://wa.me/yourwhatsappnumber" aria-label="WhatsApp">
+          <a href="https://wa.me/09906515448" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
           </a>
-          <a href="mailto:youremail@domain.com" aria-label="Email">
+          <a href="mailto:komielh@gmail.com" aria-label="Email">
             <i class="far fa-envelope"></i>
           </a>
-          <a href="tel:yourphonenumber" aria-label="Phone">
+          <a href="tel:+989906515448" aria-label="Phone">
             <i class="fas fa-phone"></i>
           </a>
         </div>
@@ -126,6 +130,280 @@
       </div>
     </section>
 
+    <!-- Shipping Calculator Section -->
+    <section class="shipping-section" id="shipping-calculator">
+      <h2 class="section-title" data-i18n="shipping_calculator">
+        Shipping Calculator
+      </h2>
+
+      <div class="shipping-tabs">
+        <button
+          class="tab-btn active"
+          data-tab="small-goods"
+          data-i18n="small_goods"
+        >
+          Small Goods
+        </button>
+        <button class="tab-btn" data-tab="huge-goods" data-i18n="huge_goods">
+          Huge Goods
+        </button>
+      </div>
+
+      <!-- Small Goods Tab -->
+      <div class="tab-content active" id="small-goods">
+        <form id="small-goods-form">
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-group">
+                <label for="source-country" data-i18n="source_country"
+                  >Source Country</label
+                >
+                <select class="form-control" id="source-country" required>
+                  <option value="">Select a country</option>
+                  <option value="iran">Iran</option>
+                  <option value="iraq">Iraq</option>
+                  <option value="turkey">Turkey</option>
+                  <option value="syria">Syria</option>
+                  <option value="lebanon">Lebanon</option>
+                  <option value="uzbekistan">Uzbekistan</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group">
+                <label for="destination-country" data-i18n="destination_country"
+                  >Destination Country</label
+                >
+                <select class="form-control" id="destination-country" required>
+                  <option value="">Select a country</option>
+                  <option value="iran">Iran</option>
+                  <option value="iraq">Iraq</option>
+                  <option value="turkey">Turkey</option>
+                  <option value="syria">Syria</option>
+                  <option value="lebanon">Lebanon</option>
+                  <option value="uzbekistan">Uzbekistan</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="shipping-method" data-i18n="shipping_method"
+              >Shipping Method</label
+            >
+            <select class="form-control" id="shipping-method" required>
+              <option value="">Select a method</option>
+              <option value="air">Air</option>
+              <option value="earth">Earth</option>
+              <option value="sea">Sea</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-group">
+                <label for="length" data-i18n="length">Length (cm)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="length"
+                  min="1"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group">
+                <label for="width" data-i18n="width">Width (cm)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="width"
+                  min="1"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group">
+                <label for="height" data-i18n="height">Height (cm)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="height"
+                  min="1"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mass" data-i18n="mass">Mass (kg)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="mass"
+              min="0.1"
+              step="0.1"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="value" data-i18n="goods_value">Goods Value</label>
+            <select class="form-control" id="value" required>
+              <option value="">Select value range</option>
+              <option value="100">Less than $100</option>
+              <option value="500">Between $100-$500</option>
+              <option value="1000">Between $500-$1,000</option>
+              <option value="5000">Between $1,000-$5,000</option>
+              <option value="10000">Between $5,000-$10,000</option>
+              <option value="100000">Between $10,000-$100,000</option>
+              <option value="500000">Between $100,000-$500,000</option>
+              <option value="1000000">Between $500,000-$1,000,000</option>
+              <option value="1000001">More than $1,000,000</option>
+            </select>
+          </div>
+
+          <button
+            type="button"
+            class="calc-btn"
+            id="calculate-btn"
+            data-i18n="calculate_shipping"
+          >
+            Calculate Shipping
+          </button>
+        </form>
+
+        <div class="result-box" id="small-goods-result">
+          <h3 data-i18n="shipping_calculation_result">
+            Shipping Calculation Result
+          </h3>
+          <div class="result-item">
+            <span data-i18n="estimated_price">Estimated Price:</span>
+            <span class="result-value" id="calculated-price">$0.00</span>
+          </div>
+          <div class="result-item">
+            <span data-i18n="estimated_time">Estimated Time:</span>
+            <span class="result-value" id="estimated-time">0 days</span>
+          </div>
+
+          <div class="action-buttons">
+            <button
+              type="button"
+              class="submit-btn"
+              id="submit-small-request"
+              data-i18n="submit_request"
+            >
+              Submit Request
+            </button>
+            <button
+              type="button"
+              class="contact-btn"
+              data-i18n="contact_for_request"
+            >
+              Contact Us for Any Request
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Huge Goods Tab -->
+      <div class="tab-content" id="huge-goods">
+        <div class="action-buttons" style="margin-bottom: 2rem">
+          <button type="button" class="submit-btn" id="direct-call-btn">
+            <i class="fas fa-phone"></i>
+            <span data-i18n="call_directly">Call Us Directly</span>
+          </button>
+          <button type="button" class="contact-btn" id="huge-goods-form-btn">
+            <i class="fas fa-file-alt"></i>
+            <span data-i18n="fill_request_form">Fill Request Form</span>
+          </button>
+        </div>
+
+        <form id="huge-goods-form" style="display: none">
+          <div class="form-group">
+            <label for="full-name" data-i18n="full_name">Full Name</label>
+            <input type="text" class="form-control" id="full-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="company-name" data-i18n="company_name"
+              >Company Name</label
+            >
+            <span class="optional" data-i18n="optional">(optional)</span>
+            <input type="text" class="form-control" id="company-name" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-group">
+                <label for="phone" data-i18n="phone_number">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" required />
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group">
+                <label for="email" data-i18n="email_address"
+                  >Email Address</label
+                >
+                <input type="email" class="form-control" id="email" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="goods-description" data-i18n="goods_description"
+              >Goods Description</label
+            >
+            <textarea
+              class="form-control"
+              id="goods-description"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="request-analysis" data-i18n="request_analysis"
+              >Request Analysis</label
+            >
+            <textarea
+              class="form-control"
+              id="request-analysis"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+
+          <div class="file-upload" id="file-upload-area">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <p data-i18n="upload_files_text">
+              Click to upload files (PDF or images)
+            </p>
+            <input
+              type="file"
+              id="file-input"
+              style="display: none"
+              accept=".pdf,.jpg,.jpeg,.png"
+              multiple
+            />
+          </div>
+          <div id="file-list"></div>
+
+          <button
+            type="button"
+            class="calc-btn"
+            id="submit-huge-request"
+            data-i18n="submit_request"
+          >
+            Submit Request
+          </button>
+        </form>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
@@ -142,14 +420,20 @@
           <a href="index.html" data-i18n="home">Home</a>
           <a href="about.html" data-i18n="about">About Us</a>
           <a href="#categories" data-i18n="products">Products</a>
+          <a href="#shipping-calculator" data-i18n="shipping_calculator"
+            >Shipping Calculator</a
+          >
           <a href="contact.html" data-i18n="contact">Contact</a>
         </div>
 
         <div class="footer-section">
           <h4 data-i18n="contact_info">Contact Info</h4>
-          <p><i class="fas fa-map-marker-alt"></i> Your Company Address</p>
-          <p><i class="fas fa-phone"></i> +123 456 7890</p>
-          <p><i class="far fa-envelope"></i> info@yourcompany.com</p>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Bierut, Zaytona Bey, Building
+            602, floor 4
+          </p>
+          <p><i class="fas fa-phone"></i> +989906515448</p>
+          <p><i class="far fa-envelope"></i> komielh@gmail.com</p>
         </div>
       </div>
 
@@ -161,9 +445,87 @@
       </div>
     </footer>
 
+    <!-- Login Modal -->
+    <div class="login-modal" id="login-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 data-i18n="login_to_submit">Login to Submit Request</h3>
+          <button class="close-modal">&times;</button>
+        </div>
+        <form class="login-form">
+          <div class="form-group">
+            <label for="login-name" data-i18n="full_name">Full Name</label>
+            <input type="text" class="form-control" id="login-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="login-company" data-i18n="company_name"
+              >Company Name</label
+            >
+            <span class="optional" data-i18n="optional">(optional)</span>
+            <input type="text" class="form-control" id="login-company" />
+          </div>
+
+          <div class="form-group">
+            <label for="login-phone" data-i18n="phone_number"
+              >Phone Number</label
+            >
+            <input type="tel" class="form-control" id="login-phone" required />
+          </div>
+
+          <div class="form-group">
+            <label for="login-email" data-i18n="email_address"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="login-email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="login-password" data-i18n="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="login-password"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="trade-major" data-i18n="trade_major">Trade Major</label>
+            <input type="text" class="form-control" id="trade-major" required />
+          </div>
+
+          <div class="form-group">
+            <label for="login-message" data-i18n="message">Message</label>
+            <span class="optional" data-i18n="optional">(optional)</span>
+            <textarea
+              class="form-control"
+              id="login-message"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <button
+            type="button"
+            class="calc-btn"
+            id="login-submit"
+            data-i18n="submit_request"
+          >
+            Submit Request
+          </button>
+        </form>
+      </div>
+    </div>
+
     <!-- JavaScript Files -->
     <script src="scripts/language-switcher.js"></script>
     <script src="scripts/globe-animation.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/shipping-calculator.js"></script>
   </body>
 </html>
