@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chemical Goods | Your Company Name</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+      <button onclick="changeLanguage('en')">EN</button>
+      <button onclick="changeLanguage('ar')">AR</button>
+      <button onclick="changeLanguage('tr')">TR</button>
+      <button onclick="changeLanguage('ru')">RU</button>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="../images/logo.png" alt="Company Logo" height="40" />
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="../index.html" data-i18n="home">Home</a>
+          <a href="../about.html" data-i18n="about">About Us</a>
+          <a href="../index.html#categories" data-i18n="products">Products</a>
+          <a href="../blog.html" data-i18n="blog">Blog</a>
+          <a href="../contact.html" data-i18n="contact">Contact Us</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Chemical Products Header -->
+    <section class="page-header">
+      <div class="header-content">
+        <h1 data-i18n="chemical_goods">Chemical Goods</h1>
+        <p>High-quality chemical products for various industries</p>
+      </div>
+    </section>
+
+    <!-- Product List -->
+    <section class="product-list">
+      <div class="container">
+        <div class="product-item">
+          <div class="product-image">
+            <!-- Add product image: ../images/chemical-product1.jpg -->
+            <img
+              src="../images/chemical-product1.jpg"
+              alt="Chemical Product 1"
+            />
+          </div>
+          <div class="product-details">
+            <h3>Industrial Solvents</h3>
+            <p>
+              High-quality solvents for various industrial applications. Our
+              solvents are manufactured to the highest standards and tested for
+              purity and performance.
+            </p>
+            <ul>
+              <li>High purity grade</li>
+              <li>Multiple formulations available</li>
+              <li>Custom blends upon request</li>
+            </ul>
+            <a href="../contact.html" class="cta-button"
+              >Contact Us for Details</a
+            >
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-image">
+            <!-- Add product image: ../images/chemical-product2.jpg -->
+            <img
+              src="../images/chemical-product2.jpg"
+              alt="Chemical Product 2"
+            />
+          </div>
+          <div class="product-details">
+            <h3>Specialty Chemicals</h3>
+            <p>
+              Customized chemical solutions for specific industrial needs. We
+              work with clients to develop specialized formulations.
+            </p>
+            <ul>
+              <li>Tailored to your requirements</li>
+              <li>Technical support available</li>
+              <li>Quality guaranteed</li>
+            </ul>
+            <a href="../contact.html" class="cta-button"
+              >Contact Us for Details</a
+            >
+          </div>
+        </div>
+
+        <!-- Add more products as needed -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="../scripts/language-switcher.js"></script>
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>

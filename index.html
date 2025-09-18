@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Trading Company | Your Products Worldwide</title>
+    <meta
+      name="description"
+      content="International trading company specializing in chemical, medicine and industrial products"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Add this to your head section for the globe animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/globe.gl@2.24/dist/globe.gl.min.js"></script>
+  </head>
+  <body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+      <button onclick="changeLanguage('en')">EN</button>
+      <button onclick="changeLanguage('ar')">AR</button>
+      <button onclick="changeLanguage('tr')">TR</button>
+      <button onclick="changeLanguage('ru')">RU</button>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <!-- Add your logo image here: images/logo.png -->
+          <img src="images/logo.png" alt="Company Logo" height="40" />
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="index.html" data-i18n="home">Home</a>
+          <a href="about.html" data-i18n="about">About Us</a>
+          <a href="#categories" data-i18n="products">Products</a>
+          <a href="blog.html" data-i18n="blog">Blog</a>
+          <a href="contact.html" data-i18n="contact">Contact Us</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Globe Animation -->
+    <section class="hero">
+      <div class="globe-container" id="globe"></div>
+      <div class="hero-content">
+        <h1 data-i18n="welcome_message">Alo Komail!</h1>
+        <p data-i18n="welcome_text">
+          Global trading solutions for your business needs
+        </p>
+
+        <div class="contact-icons">
+          <a href="https://wa.me/yourwhatsappnumber" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:youremail@domain.com" aria-label="Email">
+            <i class="far fa-envelope"></i>
+          </a>
+          <a href="tel:yourphonenumber" aria-label="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+      <h2 data-i18n="product_categories">Product Categories</h2>
+      <div class="category-grid">
+        <div class="category-item">
+          <!-- Add image: images/chemical-icon.png -->
+          <img src="images/chemical-icon.png" alt="Chemical Goods" />
+          <h3 data-i18n="chemical_goods">Chemical Goods</h3>
+          <p data-i18n="chemical_description">
+            High-quality chemical products for various industries
+          </p>
+          <a href="category-pages/chemical.html" data-i18n="learn_more"
+            >Learn More</a
+          >
+        </div>
+
+        <div class="category-item">
+          <!-- Add image: images/medicine-icon.png -->
+          <img src="images/medicine-icon.png" alt="Medicine Goods" />
+          <h3 data-i18n="medicine_goods">Medicine Goods</h3>
+          <p data-i18n="medicine_description">
+            Pharmaceutical products and healthcare solutions
+          </p>
+          <a href="category-pages/medicine.html" data-i18n="learn_more"
+            >Learn More</a
+          >
+        </div>
+
+        <div class="category-item">
+          <!-- Add image: images/third-icon.png -->
+          <img src="images/third-icon.png" alt="Third Goods" />
+          <h3 data-i18n="third_goods">Third Goods</h3>
+          <p data-i18n="third_description">
+            Description for third category of products
+          </p>
+          <a href="category-pages/third.html" data-i18n="learn_more"
+            >Learn More</a
+          >
+        </div>
+
+        <div class="category-item">
+          <!-- Add image: images/fourth-icon.png -->
+          <img src="images/fourth-icon.png" alt="Fourth Goods" />
+          <h3 data-i18n="fourth_goods">Fourth Goods</h3>
+          <p data-i18n="fourth_description">
+            Description for fourth category of products
+          </p>
+          <a href="category-pages/fourth.html" data-i18n="learn_more"
+            >Learn More</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <!-- Add your logo image here: images/logo.png -->
+          <img src="images/logo.png" alt="Company Logo" height="30" />
+          <p data-i18n="footer_description">
+            Global trading company providing quality products worldwide
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4 data-i18n="quick_links">Quick Links</h4>
+          <a href="index.html" data-i18n="home">Home</a>
+          <a href="about.html" data-i18n="about">About Us</a>
+          <a href="#categories" data-i18n="products">Products</a>
+          <a href="contact.html" data-i18n="contact">Contact</a>
+        </div>
+
+        <div class="footer-section">
+          <h4 data-i18n="contact_info">Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Your Company Address</p>
+          <p><i class="fas fa-phone"></i> +123 456 7890</p>
+          <p><i class="far fa-envelope"></i> info@yourcompany.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Your Company Name.
+          <span data-i18n="all_rights_reserved">All rights reserved</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="scripts/language-switcher.js"></script>
+    <script src="scripts/globe-animation.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

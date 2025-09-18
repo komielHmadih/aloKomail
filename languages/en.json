@@ -1,0 +1,23 @@
+{
+  "home": "Home",
+  "about": "About Us",
+  "products": "Products",
+  "blog": "Blog",
+  "contact": "Contact Us",
+  "welcome_message": "Alo Komail!",
+  "welcome_text": "Global trading solutions for your business needs",
+  "product_categories": "Product Categories",
+  "chemical_goods": "Chemical Goods",
+  "chemical_description": "High-quality chemical products for various industries",
+  "medicine_goods": "Medicine Goods",
+  "medicine_description": "Pharmaceutical products and healthcare solutions",
+  "third_goods": "Third Goods",
+  "third_description": "Description for third category of products",
+  "fourth_goods": "Fourth Goods",
+  "fourth_description": "Description for fourth category of products",
+  "learn_more": "Learn More",
+  "footer_description": "Global trading company providing quality products worldwide",
+  "quick_links": "Quick Links",
+  "contact_info": "Contact Info",
+  "all_rights_reserved": "All rights reserved"
+}
