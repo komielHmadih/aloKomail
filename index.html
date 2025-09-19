@@ -33,7 +33,7 @@
       <div class="nav-container">
         <div class="nav-logo">
           <!-- Add your logo image here: images/logo.png -->
-          <img src="images/logo.png" alt="Company Logo" height="40" />
+          <img src="images/ALO1.png" alt="Company Logo" height="40" />
         </div>
         <div class="nav-menu" id="nav-menu">
           <a href="index.html" data-i18n="home">Home</a>
@@ -42,6 +42,23 @@
           <a href="#shipping-calculator" data-i18n="shipping_calculator"
             >Shipping Calculator</a
           >
+          <div class="dropdown">
+            <a href="#services" class="dropbtn" data-i18n="services"
+              >Services <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-content">
+              <a
+                href="services/free-consultation.html"
+                data-i18n="free_consultation"
+                >Free Consultation</a
+              >
+              <a href="services/logistics.html" data-i18n="logistics"
+                >Logistics</a
+              >
+              <a href="services/exports.html" data-i18n="exports">Exports</a>
+              <a href="services/imports.html" data-i18n="imports">Imports</a>
+            </div>
+          </div>
           <a href="blog.html" data-i18n="blog">Blog</a>
           <a href="contact.html" data-i18n="contact">Contact Us</a>
         </div>
@@ -63,7 +80,7 @@
         </p>
 
         <div class="contact-icons">
-          <a href="https://wa.me/09906515448" aria-label="WhatsApp">
+          <a href="https://wa.me/yourwhatsappnumber" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
           </a>
           <a href="mailto:komielh@gmail.com" aria-label="Email">
@@ -82,7 +99,7 @@
       <div class="category-grid">
         <div class="category-item">
           <!-- Add image: images/chemical-icon.png -->
-          <img src="images/chemical-icon.png" alt="Chemical Goods" />
+          <img src="images/chemical_icon.png" alt="Chemical Goods" />
           <h3 data-i18n="chemical_goods">Chemical Goods</h3>
           <p data-i18n="chemical_description">
             High-quality chemical products for various industries
@@ -94,7 +111,7 @@
 
         <div class="category-item">
           <!-- Add image: images/medicine-icon.png -->
-          <img src="images/medicine-icon.png" alt="Medicine Goods" />
+          <img src="images/medical_icon.png" alt="Medicine Goods" />
           <h3 data-i18n="medicine_goods">Medicine Goods</h3>
           <p data-i18n="medicine_description">
             Pharmaceutical products and healthcare solutions
@@ -106,7 +123,7 @@
 
         <div class="category-item">
           <!-- Add image: images/third-icon.png -->
-          <img src="images/third-icon.png" alt="Third Goods" />
+          <img src="images/chemical_icon.png" alt="Third Goods" />
           <h3 data-i18n="third_goods">Third Goods</h3>
           <p data-i18n="third_description">
             Description for third category of products
@@ -118,7 +135,7 @@
 
         <div class="category-item">
           <!-- Add image: images/fourth-icon.png -->
-          <img src="images/fourth-icon.png" alt="Fourth Goods" />
+          <img src="images/medical_icon.png" alt="Fourth Goods" />
           <h3 data-i18n="fourth_goods">Fourth Goods</h3>
           <p data-i18n="fourth_description">
             Description for fourth category of products
@@ -136,7 +153,8 @@
         Shipping Calculator
       </h2>
 
-      <div class="shipping-tabs">
+       </div>
+ <div class="shipping-tabs">
         <button
           class="tab-btn active"
           data-tab="small-goods"
@@ -148,7 +166,6 @@
           Huge Goods
         </button>
       </div>
-
       <!-- Small Goods Tab -->
       <div class="tab-content active" id="small-goods">
         <form id="small-goods-form">
@@ -404,12 +421,92 @@
       </div>
     </section>
 
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <h2 class="section-title" data-i18n="our_services">Our Services</h2>
+        <p class="section-subtitle" data-i18n="services_subtitle">
+          Comprehensive solutions for your global trade needs
+        </p>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3 data-i18n="free_consultation">Free Consultation</h3>
+            <p data-i18n="free_consultation_desc">
+              Get expert advice on your international trade requirements with
+              our complimentary consultation service.
+            </p>
+            <a
+              href="services/free-consultation.html"
+              class="service-btn"
+              data-i18n="learn_more"
+              >Learn More</a
+            >
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <h3 data-i18n="logistics">Logistics</h3>
+            <p data-i18n="logistics_desc">
+              End-to-end logistics solutions ensuring your goods reach their
+              destination safely and on time.
+            </p>
+            <a
+              href="services/logistics.html"
+              class="service-btn"
+              data-i18n="learn_more"
+              >Learn More</a
+            >
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-upload"></i>
+            </div>
+            <h3 data-i18n="exports">Exports</h3>
+            <p data-i18n="exports_desc">
+              Comprehensive export services to help your products reach
+              international markets efficiently.
+            </p>
+            <a
+              href="services/exports.html"
+              class="service-btn"
+              data-i18n="learn_more"
+              >Learn More</a
+            >
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-download"></i>
+            </div>
+            <h3 data-i18n="imports">Imports</h3>
+            <p data-i18n="imports_desc">
+              Streamlined import processes to bring international products to
+              your market with minimal hassle.
+            </p>
+            <a
+              href="services/imports.html"
+              class="service-btn"
+              data-i18n="learn_more"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-section">
           <!-- Add your logo image here: images/logo.png -->
-          <img src="images/logo.png" alt="Company Logo" height="30" />
+          <img src="images/ALO1.png" alt="Company Logo" height="180" />
           <p data-i18n="footer_description">
             Global trading company providing quality products worldwide
           </p>
@@ -423,104 +520,37 @@
           <a href="#shipping-calculator" data-i18n="shipping_calculator"
             >Shipping Calculator</a
           >
+          <a href="#services" data-i18n="services">Services</a>
           <a href="contact.html" data-i18n="contact">Contact</a>
         </div>
 
         <div class="footer-section">
           <h4 data-i18n="contact_info">Contact Info</h4>
-          <p>
-            <i class="fas fa-map-marker-alt"></i> Bierut, Zaytona Bey, Building
-            602, floor 4
-          </p>
-          <p><i class="fas fa-phone"></i> +989906515448</p>
+          <p><i class="fas fa-map-marker-alt"></i> Brirut, Zaytouna Bay</p>
+          <p><i class="fas fa-phone"></i> +98 990 651 5448</p>
           <p><i class="far fa-envelope"></i> komielh@gmail.com</p>
+        </div>
+
+        <div class="footer-section">
+          <h4 data-i18n="our_services">Our Services</h4>
+          <a
+            href="services/free-consultation.html"
+            data-i18n="free_consultation"
+            >Free Consultation</a
+          >
+          <a href="services/logistics.html" data-i18n="logistics">Logistics</a>
+          <a href="services/exports.html" data-i18n="exports">Exports</a>
+          <a href="services/imports.html" data-i18n="imports">Imports</a>
         </div>
       </div>
 
       <div class="footer-bottom">
         <p>
-          &copy; 2025 Alo Komail.
+          &copy; 2025 ALO KOMAIL.
           <span data-i18n="all_rights_reserved">All rights reserved</span>
         </p>
       </div>
     </footer>
-
-    <!-- Login Modal -->
-    <div class="login-modal" id="login-modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 data-i18n="login_to_submit">Login to Submit Request</h3>
-          <button class="close-modal">&times;</button>
-        </div>
-        <form class="login-form">
-          <div class="form-group">
-            <label for="login-name" data-i18n="full_name">Full Name</label>
-            <input type="text" class="form-control" id="login-name" required />
-          </div>
-
-          <div class="form-group">
-            <label for="login-company" data-i18n="company_name"
-              >Company Name</label
-            >
-            <span class="optional" data-i18n="optional">(optional)</span>
-            <input type="text" class="form-control" id="login-company" />
-          </div>
-
-          <div class="form-group">
-            <label for="login-phone" data-i18n="phone_number"
-              >Phone Number</label
-            >
-            <input type="tel" class="form-control" id="login-phone" required />
-          </div>
-
-          <div class="form-group">
-            <label for="login-email" data-i18n="email_address"
-              >Email Address</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="login-email"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="login-password" data-i18n="password">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              id="login-password"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="trade-major" data-i18n="trade_major">Trade Major</label>
-            <input type="text" class="form-control" id="trade-major" required />
-          </div>
-
-          <div class="form-group">
-            <label for="login-message" data-i18n="message">Message</label>
-            <span class="optional" data-i18n="optional">(optional)</span>
-            <textarea
-              class="form-control"
-              id="login-message"
-              rows="3"
-            ></textarea>
-          </div>
-
-          <button
-            type="button"
-            class="calc-btn"
-            id="login-submit"
-            data-i18n="submit_request"
-          >
-            Submit Request
-          </button>
-        </form>
-      </div>
-    </div>
 
     <!-- JavaScript Files -->
     <script src="scripts/language-switcher.js"></script>
